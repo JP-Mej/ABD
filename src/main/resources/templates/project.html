@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Proyectos</title>
+
+
+    <link rel="stylesheet" th:href="@{/css/project.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Gestión de Proyectos</h1>
+    <div class="form-grid">
+        <input type="number" id="projectId" placeholder="ID del proyecto">
+        <input type="number" id="activityId" placeholder="ID de actividad">
+        <input type="number" id="fundingId" placeholder="ID de funding">
+        <input type="number" id="indicatorId" placeholder="ID de indicador">
+        <input type="number" id="locationId" placeholder="ID de ubicación">
+
+        <input type="text" id="nameP" placeholder="Nombre del proyecto">
+        <input type="text" id="descriptionP" placeholder="Descripción">
+        <input type="number" id="budgetAmount" placeholder="Presupuesto">
+        <input type="text" id="strategicArea" placeholder="Área estratégica">
+        <input type="date" id="startDateP" placeholder="Fecha inicio">
+        <input type="date" id="endDateP" placeholder="Fecha fin">
+        <input type="text" id="status" placeholder="Estado (Planned, Ongoing, Completed, Cancelled)">
+    </div>
+    <button onclick="guardarProyecto()">Guardar</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>PRESUPUESTO</th>
+                <th>ESTADO</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProyectos"></tbody>
+    </table>
+</div>
+
+<script th:src="@{/js/project.js}"></script>
+</body>
+</html>

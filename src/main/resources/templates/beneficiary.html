@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestión de Beneficiarios</title>
+
+    <!-- ✅ CSS compartido con employee -->
+    <link rel="stylesheet" th:href="@{/css/employee.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Gestión de Beneficiarios</h1>
+
+    <div class="form-grid">
+        <input type="number" id="beneficiaryId" placeholder="ID">
+        <input type="text" id="dniB" placeholder="DNI">
+        <input type="number" id="institutionId" placeholder="ID Institución">
+
+        <input type="text" id="gender" placeholder="Género (M/F)">
+        <input type="text" id="firstNameB" placeholder="Nombres">
+        <input type="text" id="lastNameB" placeholder="Apellidos">
+
+        <input type="date" id="birthDateB">
+        <input type="text" id="occupation" placeholder="Ocupación">
+        <input type="text" id="phoneB" placeholder="Teléfono">
+
+        <input type="email" id="emailB" placeholder="Correo electrónico">
+    </div>
+
+    <button onclick="guardarBeneficiario()">Guardar Beneficiario</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DNI</th>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>EMAIL</th>
+                <th>TELÉFONO</th>
+            </tr>
+        </thead>
+        <tbody id="tablaBeneficiarios"></tbody>
+    </table>
+</div>
+
+<script th:src="@{/js/beneficiary.js}"></script>
+</body>
+</html>

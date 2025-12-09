@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestión de Empleados</title>
+
+    <!-- ✅ CSS CORRECTO PARA SPRING BOOT -->
+    <link rel="stylesheet" th:href="@{/css/employee.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Gestión de Empleados</h1>
+
+    <div class="form-grid">
+        <input type="number" id="employeeId" placeholder="ID">
+        <input type="text" id="firstNameE" placeholder="Nombres">
+        <input type="text" id="lastNameE" placeholder="Apellidos">
+        <input type="date" id="birthDateE">
+        <input type="email" id="emailE" placeholder="Correo">
+        <input type="text" id="phoneE" placeholder="Teléfono">
+        <input type="text" id="addressE" placeholder="Dirección">
+        <input type="text" id="employmentType" placeholder="Tipo de contrato">
+        <input type="number" id="salary" placeholder="Salario">
+        <input type="date" id="startDateE">
+        <input type="date" id="endDateE">
+    </div>
+
+    <button onclick="guardarEmpleado()">Guardar Empleado</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>EMAIL</th>
+                <th>TIPO</th>
+                <th>SALARIO</th>
+            </tr>
+        </thead>
+        <tbody id="tablaEmpleados"></tbody>
+    </table>
+</div>
+
+<script th:src="@{/js/employee.js}"></script>
+</body>
+</html>
